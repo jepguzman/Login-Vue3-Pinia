@@ -18,6 +18,8 @@ import Login from '@/views/Login.vue'
 </template>
 
 <style lang="scss" scoped>
+@import './assets/main.scss';
+
 .main-wall {
   display: flex;
   flex-direction: row;
@@ -25,10 +27,12 @@ import Login from '@/views/Login.vue'
   justify-content: center;
   height: 100vh;
   gap: 10px;
+  background-color: $primary-color;
+  font-family: fuente;
 
   &__more {
     height: 600px;
-    background-color: lightgreen;
+    background-color: $contrast-color;
     display: flex;
     flex-direction: column;
     align-items: center;
