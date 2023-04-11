@@ -37,7 +37,7 @@
   height: 100vh;
   gap: 10px;
   background-color: $primary-color;
-  font-family: fuente;
+  font-family: test;
 
   &__more {
     height: 600px;
