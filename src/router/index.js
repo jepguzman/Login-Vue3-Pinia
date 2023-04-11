@@ -5,10 +5,26 @@ const router = createRouter({
   routes: [
     {
       path: '/',
+      name: 'Home',
+      component: () => import('../views/Home.vue')
+    },
+    {
+      path: '/login',
       name: 'Login',
       component: () => import('../views/Login.vue')
-    }
+    },
   ]
 })
+
+/* router.beforeEach((to, from) => {
+    const authStore = useAuthStore();
+
+    const publicPage = ['/login','/signup'];
+    const requiredAuth = !publicPage.includes(to.path);
+
+    if (!authStore.isLogged && requiredAuth) {
+        return '/login';
+    }
+}); */
 
 export default router
