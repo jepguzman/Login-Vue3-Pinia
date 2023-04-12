@@ -8,12 +8,12 @@ import Header from '@/components/Header.vue'
 
     <div class="home__body">
       <div class="home__body__slogan">
-        <h1>Hey! We know you're tired... Just join us to save more time!</h1>
+        <h1>Hey! join us to save more time!</h1>
         <h3 class="home__body__slogan__description">
           <p>*</p>
           Sometimes you have to be handle by a good team like us.
         </h3>
-        <RouterLink to="/login">Join us!</RouterLink>
+        <button><RouterLink class="link-button" to="/login">Get Started!</RouterLink></button>
       </div>
       <div class="home__body__ilustration">
         <img src="@/assets/imgs/home.svg" alt="" />
@@ -28,7 +28,7 @@ import Header from '@/components/Header.vue'
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   height: 100vh;
   background-color: #eff1f3;
 
@@ -43,29 +43,48 @@ import Header from '@/components/Header.vue'
       width: 50%;
       display: flex;
       flex-direction: column;
-
+      font-family: test;
       justify-content: center;
       padding: 50px;
 
       h1 {
-        font-size: 60px;
-        text-shadow: 2px 2px 2px green;
+        color: $primary-color;
+        font-size: 90px;
+        font-weight: 700;
+        text-shadow: -5px 5px 5px rgb(173, 173, 173);
       }
 
       &__description {
+        font-size: 30px;
         display: flex;
         flex-direction: row;
         align-items: center;
+        color: $font-color;
+
+        p {
+          color: red;
+          margin-right: 10px;
+        }
       }
 
       button {
-        padding: 10px 20px;
+        width: fit-content;
+        padding: 15px 70px;
+        background-color: $secondary-color;
+        border-style: none;
+        border-radius: 4px;
+
+        .link-button {
+          text-decoration: none;
+          font-size: 20px;
+          color: $font-color;
+          font-weight: 600;
+        }
       }
     }
 
     &__ilustration {
       width: 50%;
-
       align-self: flex-end;
       justify-self: flex-end;
 

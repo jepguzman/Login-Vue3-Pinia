@@ -3,12 +3,12 @@
 <template>
   <div class="header">
     <div class="header__logo">
-      <img src="@/assets/imgs/test.png" alt="" />
+      <img src="@/assets/imgs/Ya.png" alt="" />
     </div>
 
     <div class="header__routes">
-      <RouterLink to="/login">Pricing</RouterLink>
-      <RouterLink to="">Support</RouterLink>
+      <RouterLink class="header__routes__links" to="">Support</RouterLink>
+      <RouterLink class="header__routes__links" to="/login">Pricing</RouterLink>
     </div>
   </div>
 </template>
@@ -25,9 +25,10 @@
   width: 100%;
 
   &__logo {
+    margin-left: 20px;
     img {
       width: 70px;
-      height: 50px;
+      height: 70px;
     }
   }
 
@@ -38,6 +39,30 @@
     justify-content: center;
     margin-inline: 30px;
     gap: 10px;
+
+    &__links {
+      text-decoration: none;
+      font-size: 20px;
+      border: 1px solid white;
+      padding: 7px 14px;
+      border-radius: 4px;
+      color: $contrast-color;
+
+      &:last-child {
+        border: 1px solid $secondary-color;
+        color: $secondary-color;
+      }
+    }
+
+    &__links:hover {
+      background-color: $contrast-color;
+      color: $primary-color;
+
+      &:last-child {
+        background-color: $secondary-color;
+        color: $primary-color;
+      }
+    }
   }
 }
 </style>

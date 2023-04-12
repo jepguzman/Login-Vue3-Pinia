@@ -3,9 +3,13 @@
 <template>
   <div class="main-wall">
     <div class="main-wall__more">
-      <h1>Prepare-ya!</h1>
+      <div class="main-wall__more__brand">
+        <h1>Prepare-ya!</h1>
+        <img src="@/assets/imgs/ya.png" alt="" />
+      </div>
+
       <p>Where correctness comes to reality</p>
-      <img src="@/assets/imgs/organica.png" alt="" />
+      <img class="main-wall__more__ilustration" src="@/assets/imgs/organica.png" alt="" />
     </div>
     <div class="login-card">
       <h2 class="login-card__title">Connect to your account</h2>
@@ -16,7 +20,6 @@
           <input type="checkbox" name="" id="" />
           <p>Remember password</p>
         </div>
-
         <p>Forgot password?</p>
       </div>
 
@@ -49,12 +52,21 @@
     border-radius: 5px;
     padding-top: 50px;
 
-    img {
+    &__brand {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      img {
+        height: 60px;
+        width: 60px;
+        margin-left: 20px;
+      }
+    }
+
+    &__ilustration {
       height: 500px;
     }
-  }
-
-  &__content {
   }
 
   .login-card {
