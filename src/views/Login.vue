@@ -25,7 +25,8 @@
 
       <button>Get inside!</button>
       <span
-        >Dont have an account? <RouterLink class="highlighted" to="">Create one!</RouterLink></span
+        >Dont have an account?
+        <RouterLink class="highlighted" to="/signup">Create one!</RouterLink></span
       >
     </div>
   </div>
@@ -113,6 +114,7 @@
       border-style: none;
       padding: 5px;
       border-radius: 4px;
+      border: 1px solid black;
     }
 
     button {
