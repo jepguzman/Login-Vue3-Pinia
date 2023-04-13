@@ -44,7 +44,7 @@
       text-decoration: none;
       font-size: 20px;
       border: 1px solid white;
-      padding: 7px 14px;
+      padding: 5px 10px;
       border-radius: 4px;
       color: $contrast-color;
 

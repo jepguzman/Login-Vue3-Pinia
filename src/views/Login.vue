@@ -24,7 +24,9 @@
       </div>
 
       <button>Get inside!</button>
-      <span>Haven't you join us! <RouterLink to="">Subscribe now!</RouterLink></span>
+      <span
+        >Dont have an account? <RouterLink class="highlighted" to="">Create one!</RouterLink></span
+      >
     </div>
   </div>
 </template>
@@ -40,7 +42,6 @@
   height: 100vh;
   gap: 10px;
   background-color: $primary-color;
-  font-family: test;
 
   &__more {
     height: 600px;
@@ -84,7 +85,6 @@
     gap: 20px;
 
     &__title {
-      font-family: fuente;
     }
 
     &__reminders {
@@ -92,6 +92,7 @@
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
+      font-size: 13px;
 
       &__remember-pwd {
         display: flex;
@@ -99,10 +100,15 @@
         align-items: center;
         justify-content: center;
       }
+
+      & > p:hover {
+        color: $contrast-color;
+        border-bottom: 1px solid $contrast-color;
+      }
     }
 
     &__input {
-      height: 30px;
+      height: 35px;
       width: 300px;
       border-style: none;
       padding: 5px;
@@ -110,11 +116,18 @@
     }
 
     button {
-      height: 30px;
+      height: 35px;
       width: 300px;
       border-radius: 4px;
-      background-color: white;
+      background-color: $contrast-color;
       border-style: none;
+      font-family: test;
+      font-weight: 700;
+
+      &:hover {
+        background-color: $primary-color;
+        color: $contrast-color;
+      }
     }
 
     span {
@@ -124,8 +137,13 @@
       justify-content: center;
       gap: 5px;
 
-      p {
-        color: blue;
+      .highlighted {
+        color: $contrast-color;
+        text-decoration: none;
+
+        &:hover {
+          border-bottom: 1px solid $primary-color;
+        }
       }
     }
   }

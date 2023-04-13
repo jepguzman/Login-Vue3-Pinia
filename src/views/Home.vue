@@ -43,7 +43,6 @@ import Header from '@/components/Header.vue'
       width: 50%;
       display: flex;
       flex-direction: column;
-      font-family: test;
       justify-content: center;
       padding: 50px;
 
@@ -58,7 +57,6 @@ import Header from '@/components/Header.vue'
         font-size: 30px;
         display: flex;
         flex-direction: row;
-        align-items: center;
         color: $font-color;
 
         p {
