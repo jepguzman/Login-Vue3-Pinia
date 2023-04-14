@@ -12,12 +12,15 @@
         <input type="text" placeholder="Repeat password" />
         <div><input type="checkbox" name="" id="" />Terms and condition</div>
         <button>Create account</button>
-        <span>Already have an account? <RouterLink to="/login">Sign in</RouterLink> </span>
+        <span
+          >Already have an account? <RouterLink class="highlighted" to="/login">Sign in</RouterLink>
+        </span>
       </div>
       <div class="signup-card__slogan">
         <div class="signup-card__slogan__glass">
           <h2>Glad to see you</h2>
           <h4>Here is where you and us get comfortable</h4>
+          <img src="@/assets/imgs/signup.png" />
         </div>
       </div>
     </div>
@@ -68,6 +71,7 @@
         border-radius: 4px;
         border: 0.5px solid black;
         padding-left: 10px;
+        font-family: test;
       }
 
       button {
@@ -77,6 +81,14 @@
         background-color: $secondary-color;
         border-style: none;
         font-family: test;
+      }
+      .highlighted {
+        color: $secondary-color;
+        text-decoration: none;
+
+        &:hover {
+          border-bottom: 1px solid $secondary-color;
+        }
       }
     }
 
@@ -94,7 +106,12 @@
         backdrop-filter: blur(5px);
         border-radius: 10px;
 
-        color: $contrast-color;
+        color: $font-color;
+
+        img {
+          height: 320px;
+          width: 420px;
+        }
       }
     }
   }

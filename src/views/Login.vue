@@ -112,9 +112,10 @@
       height: 35px;
       width: 300px;
       border-style: none;
-      padding: 5px;
+      padding-left: 10px;
       border-radius: 4px;
       border: 1px solid black;
+      font-family: test;
     }
 
     button {
