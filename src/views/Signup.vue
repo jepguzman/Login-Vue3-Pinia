@@ -1,9 +1,22 @@
-<script setup></script>
+<script setup>
+import { useAuthStore } from '@/stores/AuthStore.js'
+const AuthStore = useAuthStore()
+
+async function onSubmit(values) {
+  try {
+    console.log('bien')
+    await AuthStore.register(values)
+  } catch (error) {
+    alert('mal')
+    console.log('mal', error)
+  }
+}
+</script>
 
 <template>
   <div class="wall-page">
     <div class="signup-card">
-      <div class="signup-card__input-content">
+      <form @submit="onSubmit" class="signup-card__input-content">
         <h1>Hello, friend!</h1>
         <input type="text" placeholder="Name" />
         <input type="text" placeholder="Surname" />
@@ -15,7 +28,7 @@
         <span
           >Already have an account? <RouterLink class="highlighted" to="/login">Sign in</RouterLink>
         </span>
-      </div>
+      </form>
       <div class="signup-card__slogan">
         <div class="signup-card__slogan__glass">
           <h2>Glad to see you</h2>

@@ -1,4 +1,10 @@
-<script setup></script>
+<script setup>
+import axios from 'axios'
+
+import { useAuthStore } from '@/stores/AuthStore.js'
+
+const AuthStore = useAuthStore()
+</script>
 
 <template>
   <div class="main-wall">
@@ -23,7 +29,7 @@
         <p>Forgot password?</p>
       </div>
 
-      <button>Get inside!</button>
+      <button :on-click="AuthStore.login()">Get inside!</button>
       <span
         >Dont have an account?
         <RouterLink class="highlighted" to="/signup">Create one!</RouterLink></span
