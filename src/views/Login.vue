@@ -1,9 +1,12 @@
 <script setup>
-import axios from 'axios'
-
 import { useAuthStore } from '@/stores/AuthStore.js'
-
+import { reactive } from 'vue'
 const AuthStore = useAuthStore()
+
+const user_data = reactive({
+  email: 'eve.holt@reqres.in',
+  pwd: 'cityslicka'
+})
 </script>
 
 <template>
@@ -19,8 +22,8 @@ const AuthStore = useAuthStore()
     </div>
     <div class="login-card">
       <h2 class="login-card__title">Connect to your account</h2>
-      <input class="login-card__input" type="text" placeholder="Email" />
-      <input class="login-card__input" type="text" placeholder="Password" />
+      <input v-model="user_data.email" class="login-card__input" type="text" placeholder="Email" />
+      <input v-model="user_data.pwd" class="login-card__input" type="text" placeholder="Password" />
       <div class="login-card__reminders">
         <div class="login-card__reminders__remember-pwd">
           <input type="checkbox" name="" id="" />
@@ -29,7 +32,7 @@ const AuthStore = useAuthStore()
         <p>Forgot password?</p>
       </div>
 
-      <button :on-click="AuthStore.login()">Get inside!</button>
+      <button @on-click="AuthStore.login(user_data.email, user_data.pwd)">Get inside!</button>
       <span
         >Dont have an account?
         <RouterLink class="highlighted" to="/signup">Create one!</RouterLink></span
