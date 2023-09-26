@@ -11,16 +11,21 @@ const user_data = reactive({
 
 <template>
   <div class="main-wall">
-    <div class="main-wall__more">
+    <!-- <div class="main-wall__more">
       <div class="main-wall__more__brand">
         <h1>Prepare-ya!</h1>
-        <img src="@/assets/imgs/ya.png" alt="" />
+        <img src="@/assets/imgs/logo/ya-logo.svg" alt="" />
       </div>
 
       <p>Where correctness comes to reality</p>
       <img class="main-wall__more__ilustration" src="@/assets/imgs/organica.png" alt="" />
-    </div>
+    </div> -->
     <div class="login-card">
+      <div class="login-card__brand">
+        <h1>Prepare-ya!</h1>
+        <img src="@/assets/imgs/logo/ya-logo.svg" alt="" />
+      </div>
+
       <h2 class="login-card__title">Connect to your account</h2>
       <input v-model="user_data.email" class="login-card__input" type="text" placeholder="Email" />
       <input
@@ -58,7 +63,7 @@ const user_data = reactive({
   gap: 10px;
   background-color: $primary-color;
 
-  &__more {
+  /* &__more {
     height: 600px;
     background-color: $contrast-color;
     display: flex;
@@ -83,7 +88,7 @@ const user_data = reactive({
     &__ilustration {
       height: 500px;
     }
-  }
+  } */
 
   .login-card {
     width: 400px;
@@ -98,6 +103,18 @@ const user_data = reactive({
     border-radius: 4px;
 
     gap: 20px;
+
+    &__brand {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      img {
+        height: 60px;
+        width: 60px;
+        margin-left: 20px;
+      }
+    }
 
     &__title {
     }

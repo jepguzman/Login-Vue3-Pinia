@@ -8,9 +8,9 @@ const AuthStore = useAuthStore()
     <h2>
       Welcome <span class="home__title--highligted">{{ AuthStore.token }}</span>
     </h2>
-    <router-link to="/" class="home__back-link"
-      ><div class="home__back-btn">Go back</div></router-link
-    >
+    <router-link to="/" class="home__back-link">
+      <div class="home__back-btn">Go back</div>
+    </router-link>
   </div>
 </template>
 

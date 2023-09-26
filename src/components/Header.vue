@@ -3,7 +3,7 @@
 <template>
   <div class="header">
     <div class="header__logo">
-      <img src="@/assets/imgs/Ya.png" alt="" />
+      <img src="@/assets/imgs/logo/ya-logo.svg" alt="" />
     </div>
 
     <div class="header__routes">
@@ -42,9 +42,9 @@
 
     &__links {
       text-decoration: none;
-      font-size: 20px;
+      font-size: 16px;
       border: 1px solid white;
-      padding: 5px 10px;
+      padding: 10px 5px;
       border-radius: 4px;
       color: $contrast-color;
 

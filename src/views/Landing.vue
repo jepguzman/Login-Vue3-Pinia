@@ -8,15 +8,15 @@ import Header from '@/components/Header.vue'
 
     <div class="landing__body">
       <div class="landing__body__slogan">
-        <h1>Hey! join us to save more time!</h1>
+        <h1>Join us to save time</h1>
         <h3 class="landing__body__slogan__description">
           <p>*</p>
-          Sometimes you have to be handle by a good team like us.
+          Organize better. Produce more.
         </h3>
         <button><router-link class="link-button" to="/login">Get Started!</router-link></button>
       </div>
       <div class="landing__body__ilustration">
-        <img src="@/assets/imgs/home.svg" alt="" />
+        <img src="@/assets/imgs/land-hero.svg" alt="" />
       </div>
     </div>
   </div>
@@ -57,6 +57,7 @@ import Header from '@/components/Header.vue'
         font-size: 30px;
         display: flex;
         flex-direction: row;
+        align-items: center;
         color: $font-color;
 
         p {
