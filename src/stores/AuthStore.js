@@ -1,5 +1,6 @@
 import { defineStore } from "pinia";
-import auth from "@/helpers/auth.service.js";
+import auth from "@/services/auth.service.js";
+import router from "@/router/index.js";
 
 
 export const useAuthStore = defineStore({
@@ -19,20 +20,23 @@ export const useAuthStore = defineStore({
       try {
         let response = await auth.login(email, pwd);
         this.token = response.data.token;
-        console.log(response);
-       /*  router.push("/users") */
+        router.push("/home")
       } 
       catch (error) {
         console.log(error.message);
       }
     },
-    /* login(email, pwd) {
-        axios.post("https://demo.treblle.com/api/v1/auth/login", {
-          email: email,
-          password: pwd,
-        })
-        .then(() => {})
-        .catch(()=> {});
-    }, */
+
+    async register(email, pwd){
+      await auth.register(email, pwd)
+      .then((res)=>{
+        console.log(res);
+        this.token = res.data.token;
+        router.push("/home")
+      })
+      .catch ((error)=>{
+        console.log(error);
+      }) 
+    }
   },
 });

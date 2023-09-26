@@ -1,34 +1,32 @@
 <script setup>
 import { useAuthStore } from '@/stores/AuthStore.js'
+import { reactive } from 'vue'
+
 const AuthStore = useAuthStore()
 
-async function onSubmit(values) {
-  try {
-    console.log('bien')
-    await AuthStore.register(values)
-  } catch (error) {
-    alert('mal')
-    console.log('mal', error)
-  }
-}
+let user_data = reactive({
+  email: 'eve.holt@reqres.in',
+  pwd: 'pistol',
+  repeat_pwd: 'pistol'
+})
 </script>
 
 <template>
   <div class="wall-page">
     <div class="signup-card">
-      <form @submit="onSubmit" class="signup-card__input-content">
+      <div class="signup-card__input-content">
         <h1>Hello, friend!</h1>
-        <input type="text" placeholder="Name" />
-        <input type="text" placeholder="Surname" />
-        <input type="text" placeholder="Email" />
-        <input type="text" placeholder="Password" />
-        <input type="text" placeholder="Repeat password" />
+        <input v-model="user_data.email" type="text" placeholder="Email" />
+        <input v-model="user_data.pwd" type="password" placeholder="Password" />
+        <input v-model="user_data.repeat_pwd" type="password" placeholder="Repeat password" />
         <div><input type="checkbox" name="" id="" />Terms and condition</div>
-        <button>Create account</button>
+        <button v-on:click="AuthStore.register(user_data.email, user_data.pwd)">
+          Create account
+        </button>
         <span
           >Already have an account? <RouterLink class="highlighted" to="/login">Sign in</RouterLink>
         </span>
-      </form>
+      </div>
       <div class="signup-card__slogan">
         <div class="signup-card__slogan__glass">
           <h2>Glad to see you</h2>

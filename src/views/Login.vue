@@ -23,7 +23,12 @@ const user_data = reactive({
     <div class="login-card">
       <h2 class="login-card__title">Connect to your account</h2>
       <input v-model="user_data.email" class="login-card__input" type="text" placeholder="Email" />
-      <input v-model="user_data.pwd" class="login-card__input" type="text" placeholder="Password" />
+      <input
+        v-model="user_data.pwd"
+        class="login-card__input"
+        type="password"
+        placeholder="Password"
+      />
       <div class="login-card__reminders">
         <div class="login-card__reminders__remember-pwd">
           <input type="checkbox" name="" id="" />
@@ -32,7 +37,7 @@ const user_data = reactive({
         <p>Forgot password?</p>
       </div>
 
-      <button @on-click="AuthStore.login(user_data.email, user_data.pwd)">Get inside!</button>
+      <button v-on:click="AuthStore.login(user_data.email, user_data.pwd)">Get inside!</button>
       <span
         >Dont have an account?
         <RouterLink class="highlighted" to="/signup">Create one!</RouterLink></span
