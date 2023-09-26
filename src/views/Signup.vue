@@ -24,7 +24,8 @@ let user_data = reactive({
           Create account
         </button>
         <span
-          >Already have an account? <RouterLink class="highlighted" to="/login">Sign in</RouterLink>
+          >Already have an account?
+          <router-link class="highlighted" to="/login">Sign in</router-link>
         </span>
       </div>
       <div class="signup-card__slogan">
@@ -42,10 +43,8 @@ let user_data = reactive({
 @import '@/assets/main.scss';
 .wall-page {
   background-color: $primary-color;
-
   height: 100vh;
   width: 100vw;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,14 +54,11 @@ let user_data = reactive({
     background-repeat: no-repeat;
     background-size: cover;
     background-color: white;
-
     width: 900px;
-
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-
     border-radius: 4px;
     padding: 20px;
 
@@ -111,12 +107,10 @@ let user_data = reactive({
       &__glass {
         padding: 20px;
         border-radius: 10px;
-
         background: rgba(255, 255, 255, 0.1);
         box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
         backdrop-filter: blur(5px);
         border-radius: 10px;
-
         color: $font-color;
 
         img {
