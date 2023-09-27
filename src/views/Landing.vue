@@ -1,5 +1,6 @@
 <script setup>
 import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
 </script>
 
 <template>
@@ -19,6 +20,7 @@ import Header from '@/components/Header.vue'
         <img src="@/assets/imgs/land-hero.svg" alt="" />
       </div>
     </div>
+    <Footer />
   </div>
 </template>
 
