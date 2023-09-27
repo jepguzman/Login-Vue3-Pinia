@@ -15,10 +15,48 @@ let user_data = reactive({
   <div class="wall-page">
     <div class="signup-card">
       <div class="signup-card__input-content">
+        <img src="@/assets/imgs/logo/ya-logo.svg" alt="prepare-ya logo" />
         <h1>Hello, friend!</h1>
-        <input v-model="user_data.email" type="text" placeholder="Email" />
-        <input v-model="user_data.pwd" type="password" placeholder="Password" />
-        <input v-model="user_data.repeat_pwd" type="password" placeholder="Repeat password" />
+        <h4>This is where we get comfortable</h4>
+        <div class="signup-card__input-content__input-box">
+          <img
+            class="signup-card__input-content__input-box__icon"
+            src="@/assets/imgs/icons/user.svg"
+            alt=""
+          />
+          <input
+            class="signup-card__input-content__input-box__input"
+            v-model="user_data.email"
+            type="text"
+            placeholder="Email"
+          />
+        </div>
+        <div class="signup-card__input-content__input-box">
+          <img
+            class="signup-card__input-content__input-box__icon"
+            src="@/assets/imgs/icons/pwd.svg"
+            alt=""
+          />
+          <input
+            class="signup-card__input-content__input-box__input"
+            v-model="user_data.pwd"
+            type="password"
+            placeholder="Password"
+          />
+        </div>
+        <div class="signup-card__input-content__input-box">
+          <img
+            class="signup-card__input-content__input-box__icon"
+            src="@/assets/imgs/icons/re-pwd.svg"
+            alt=""
+          />
+          <input
+            class="signup-card__input-content__input-box__input"
+            v-model="user_data.repeat_pwd"
+            type="password"
+            placeholder="Repeat password"
+          />
+        </div>
         <div><input type="checkbox" name="" id="" />Terms and condition</div>
         <button v-on:click="AuthStore.register(user_data.email, user_data.pwd)">
           Create account
@@ -27,13 +65,6 @@ let user_data = reactive({
           >Already have an account?
           <router-link class="highlighted" to="/login">Sign in</router-link>
         </span>
-      </div>
-      <div class="signup-card__slogan">
-        <div class="signup-card__slogan__glass">
-          <h2>Glad to see you</h2>
-          <h4>Here is where you and us get comfortable</h4>
-          <img src="@/assets/imgs/signup.png" />
-        </div>
       </div>
     </div>
   </div>
@@ -53,13 +84,12 @@ let user_data = reactive({
     background-image: url('@/assets/imgs/wave.svg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: white;
-    width: 900px;
+    background-color: $secondary-color;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    border-radius: 4px;
+    border-radius: 10px;
     padding: 20px;
 
     &__input-content {
@@ -68,54 +98,51 @@ let user_data = reactive({
       align-items: center;
       justify-content: center;
       gap: 15px;
-      padding: 20px;
+      padding: 50px;
       height: 100%;
 
-      input:not([type='checkbox']) {
-        height: 35px;
-        width: 300px;
-        border-style: none;
-        border-radius: 4px;
-        border: 0.5px solid black;
-        padding-left: 10px;
-        font-family: test;
-      }
+      &__input-box {
+        display: flex;
+        align-items: center;
+        border-bottom: 1.5px solid black;
+        margin-block: 5px;
 
+        &__input {
+          margin-left: 10px;
+          height: 35px;
+          width: 250px;
+          border-style: none;
+          padding-left: 10px;
+          border-radius: 4px;
+          background-color: transparent;
+          font-family: test;
+
+          &:focus {
+            background-color: black;
+            color: white;
+          }
+
+          &::placeholder {
+            color: black;
+          }
+        }
+      }
       button {
         height: 35px;
         width: 300px;
         border-radius: 4px;
-        background-color: $secondary-color;
+        background-color: $primary-color;
         border-style: none;
         font-family: test;
+        color: $contrast-color;
+        cursor: pointer;
       }
       .highlighted {
-        color: $secondary-color;
+        color: $contrast-color;
         text-decoration: none;
 
         &:hover {
-          border-bottom: 1px solid $secondary-color;
-        }
-      }
-    }
-
-    &__slogan {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      &__glass {
-        padding: 20px;
-        border-radius: 10px;
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-        backdrop-filter: blur(5px);
-        border-radius: 10px;
-        color: $font-color;
-
-        img {
-          height: 320px;
-          width: 420px;
+          border-bottom: 1px solid $contrast-color;
         }
       }
     }
