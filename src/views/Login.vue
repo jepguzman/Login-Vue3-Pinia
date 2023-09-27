@@ -11,15 +11,6 @@ const user_data = reactive({
 
 <template>
   <div class="main-wall">
-    <!-- <div class="main-wall__more">
-      <div class="main-wall__more__brand">
-        <h1>Prepare-ya!</h1>
-        <img src="@/assets/imgs/logo/ya-logo.svg" alt="" />
-      </div>
-
-      <p>Where correctness comes to reality</p>
-      <img class="main-wall__more__ilustration" src="@/assets/imgs/organica.png" alt="" />
-    </div> -->
     <div class="login-card">
       <div class="login-card__brand">
         <h1>Prepare-ya!</h1>
@@ -27,13 +18,24 @@ const user_data = reactive({
       </div>
 
       <h2 class="login-card__title">Connect to your account</h2>
-      <input v-model="user_data.email" class="login-card__input" type="text" placeholder="Email" />
-      <input
-        v-model="user_data.pwd"
-        class="login-card__input"
-        type="password"
-        placeholder="Password"
-      />
+      <div class="login-card__input-box">
+        <img class="login-card__input-box__icon" src="@/assets/imgs/icons/user.svg" alt="" />
+        <input
+          class="login-card__input-box__input"
+          v-model="user_data.email"
+          type="text"
+          placeholder="Email"
+        />
+      </div>
+      <div class="login-card__input-box">
+        <img class="login-card__input-box__icon" src="@/assets/imgs/icons/pwd.svg" alt="" />
+        <input
+          class="login-card__input-box__input"
+          v-model="user_data.pwd"
+          type="password"
+          placeholder="Password"
+        />
+      </div>
       <div class="login-card__reminders">
         <div class="login-card__reminders__remember-pwd">
           <input type="checkbox" name="" id="" />
@@ -63,45 +65,15 @@ const user_data = reactive({
   gap: 10px;
   background-color: $primary-color;
 
-  /* &__more {
-    height: 600px;
-    background-color: $contrast-color;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    padding-top: 50px;
-
-    &__brand {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-
-      img {
-        height: 60px;
-        width: 60px;
-        margin-left: 20px;
-      }
-    }
-
-    &__ilustration {
-      height: 500px;
-    }
-  } */
-
   .login-card {
     width: 400px;
     height: 600px;
     background-color: $secondary-color;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     border-radius: 4px;
-
     gap: 20px;
 
     &__brand {
@@ -116,7 +88,29 @@ const user_data = reactive({
       }
     }
 
-    &__title {
+    &__input-box {
+      display: flex;
+      align-items: center;
+      border-bottom: 1.5px solid black;
+
+      &__input {
+        margin-left: 10px;
+        height: 35px;
+        width: 250px;
+        border-style: none;
+        padding-left: 10px;
+        border-radius: 4px;
+        background-color: transparent;
+        font-family: test;
+
+        &:focus {
+          background-color: black;
+          color: white;
+        }
+        &::placeholder {
+          color: black;
+        }
+      }
     }
 
     &__reminders {
@@ -136,17 +130,8 @@ const user_data = reactive({
       & > p:hover {
         color: $contrast-color;
         border-bottom: 1px solid $contrast-color;
+        cursor: pointer;
       }
-    }
-
-    &__input {
-      height: 35px;
-      width: 300px;
-      border-style: none;
-      padding-left: 10px;
-      border-radius: 4px;
-      border: 1px solid black;
-      font-family: test;
     }
 
     button {
@@ -157,6 +142,7 @@ const user_data = reactive({
       border-style: none;
       font-family: test;
       font-weight: 700;
+      cursor: pointer;
 
       &:hover {
         background-color: $primary-color;
