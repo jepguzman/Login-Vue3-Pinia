@@ -9,7 +9,7 @@ import Footer from '@/components/Footer.vue'
 
     <div class="landing__body">
       <div class="landing__body__slogan">
-        <h1>Join us to save time</h1>
+        <h1>Clear. Dynamic. Fast</h1>
         <h3 class="landing__body__slogan__description">
           <p>*</p>
           Organize better. Produce more.
@@ -74,6 +74,13 @@ import Footer from '@/components/Footer.vue'
         background-color: $secondary-color;
         border-style: none;
         border-radius: 4px;
+        cursor: pointer;
+        transition: 0.5s;
+        font-family: test;
+        &:hover {
+          transition: 0.5s;
+          transform: scale(1.05);
+        }
 
         .link-button {
           text-decoration: none;
@@ -86,11 +93,8 @@ import Footer from '@/components/Footer.vue'
 
     &__ilustration {
       width: 50%;
-      align-self: flex-end;
+      align-self: center;
       justify-self: flex-end;
-
-      img {
-      }
     }
   }
 }
