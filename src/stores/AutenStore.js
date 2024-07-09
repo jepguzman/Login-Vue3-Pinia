@@ -2,17 +2,13 @@ import { defineStore } from "pinia";
 import router from "@/router/index.js";
 
 
-export const useAuthStore = defineStore({
-  id: "authStore",
+export const useAutenStore = defineStore({
+  id: "autenStore",
 
   state: () => {
     return {
-      url:'http://localhost/apiserver',
-      usuario: {},
-      userid:{},
-      usuarioDatos: [],
-      usuarioGrupos:[],
-      listaGrupos:[]
+      idalumno:{},
+      nombre:{}
     };
   },
 
@@ -20,7 +16,7 @@ export const useAuthStore = defineStore({
   },
 
   actions: {    
-    async login(usuario,password)
+    /*async login(usuario,password)
     {
       try 
       {
@@ -60,6 +56,6 @@ export const useAuthStore = defineStore({
       catch (error) {
         console.log(error.message);
       }
-    },
+    },*/
   },
 });

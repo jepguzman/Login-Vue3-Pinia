@@ -2,7 +2,7 @@
 
 <template>
   <div class="footer">
-    <h3>2023, Made with 💚 by <a href="">Jackson</a></h3>
+    <h3>2024, Hecho con  💚 <a href=""> @jepguzman </a></h3>
   </div>
 </template>
 

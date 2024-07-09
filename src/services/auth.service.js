@@ -2,6 +2,7 @@ import  Api  from "./Api";
 
 export default{
   login(email, password){
+    console.log("API: ",email);
     return Api().post('/login',{
         email: email,
         password : password

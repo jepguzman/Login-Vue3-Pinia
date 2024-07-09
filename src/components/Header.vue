@@ -2,67 +2,28 @@
 
 <template>
   <div class="header">
-    <div class="header__logo">
-      <img src="@/assets/imgs/logo/ya-logo.svg" alt="" />
-    </div>
-
-    <div class="header__routes">
-      <RouterLink class="header__routes__links" to="">Support</RouterLink>
-      <RouterLink class="header__routes__links" to="/login">Pricing</RouterLink>
-    </div>
+      <img src="/src/assets/imgs/logoSEP.png" alt="Logo SEP" />
+      <img src="/src/assets/imgs/logoNacional.png" alt="Logo Nacional">
+      <img src="/src/assets/imgs/logoSecundaria.png" alt="Logo Secundaria">
   </div>
 </template>
 
 <style lang="scss" scoped>
 @import '@/assets/main.scss';
+
 .header {
-  background-color: $primary-color;
+  background-color: $primary-white;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  //justify-content: center;
+  justify-content: space-around;
   height: 10vh;
-  width: 100%;
-
-  &__logo {
-    margin-left: 20px;
-    img {
-      width: 70px;
-      height: 70px;
-    }
-  }
-
-  &__routes {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-inline: 30px;
-    gap: 10px;
-
-    &__links {
-      text-decoration: none;
-      font-size: 16px;
-      border: 1px solid white;
-      padding: 10px 5px;
-      border-radius: 4px;
-      color: $contrast-color;
-
-      &:last-child {
-        border: 1px solid $secondary-color;
-        color: $secondary-color;
-      }
-    }
-
-    &__links:hover {
-      background-color: $contrast-color;
-      color: $primary-color;
-
-      &:last-child {
-        background-color: $secondary-color;
-        color: $primary-color;
-      }
-    }
-  }
+  width: 80%;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  margin-right: 150px;
+  margin-left: 150px;
 }
+
 </style>

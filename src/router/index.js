@@ -5,12 +5,12 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
+      path: '/landing',
       name: 'Landing',
       component: () => import('../views/Landing.vue')
     },
     {
-      path: '/login',
+      path: '/',
       name: 'Login',
       component: () => import('../views/Login.vue')
     },
@@ -24,18 +24,17 @@ const router = createRouter({
       name: 'Home',
       component: () => import('../views/Home.vue')
     },
+    {
+      path: '/usuarioGrupos/:lista',
+      name: 'usuarioGrupos',
+      component: () => import('../views/usuarioGrupos.vue')
+    },
+    {
+      path: '/autenticidad/:id',
+      name: 'autenticidad',
+      component: () => import('../views/Autenticidad.vue')
+    },
   ]
 })
-
-/* router.beforeEach((to, from) => {
-    const authStore = useAuthStore();
-
-    const publicPage = ['/login','/signup'];
-    const requiredAuth = !publicPage.includes(to.path);
-
-    if (!authStore.isLogged && requiredAuth) {
-        return '/login';
-    }
-}); */
 
 export default router

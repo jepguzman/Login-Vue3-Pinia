@@ -1,6 +1,9 @@
-$primary-color: #191923;
-$secondary-color: #DACC3E;
+$primary-color: #4d4df3;
+$back-color: #06b7e4b2;
+$secondary-color: #bda72d;
+$card-color: #f9eefc;
 $contrast-color: #EFF1F3;
+$primary-white: #FFF;
 
 $font-color: #434242;
 
@@ -8,3 +11,30 @@ $font-color: #434242;
     font-family: test;
     src: url("@/assets/fonts/Comfortaa-Medium.ttf");
 }
+@font-face {
+    font-family: testB;
+    src: url("@/assets/fonts/Comfortaa-Bold.ttf");
+}
+@font-face {
+    font-family: creamy;
+    src: url("@/assets/fonts/Creamy-Mozarella.otf");
+}
+@font-face {
+    font-family: broaek;
+    src: url("@/assets/fonts/Broaek-Regular.ttf");
+}
+@font-face {
+    font-family: letter;
+    src: url("@/assets/fonts/Letter-Regular.otf");
+}
+@font-face {
+    font-family: dilema;
+    src: url("@/assets/fonts/Dilemma-Regular.ttf");
+}
+@font-face {
+    font-family: super;
+    src: url("@/assets/fonts/Super-Friend.ttf");
+}
+
+
+
