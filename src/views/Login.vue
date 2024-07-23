@@ -111,7 +111,7 @@ const user_data = reactive({
     border-style: none;
     font-family: broaek;
     font-weight: 700;
-    font-size: 64px;
+    font-size: 48px;
     cursor: pointer;
 
     &:hover {
